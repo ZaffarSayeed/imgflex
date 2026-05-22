@@ -4,6 +4,7 @@ import os
 import uuid
 import threading
 import time
+from flask import Response
 
 app = Flask(__name__)
 
@@ -285,6 +286,77 @@ def convert():
         output_path,
         as_attachment=True
     )
+
+
+
+
+
+# Create Sitemap.xml
+
+@app.route('/sitemap.xml')
+def sitemap():
+
+    sitemap_xml = f'''<?xml version="1.0" encoding="UTF-8"?>
+
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+        <url>
+            <loc>https://www.imgflex.co.in/</loc>
+        </url>
+
+        <url>
+            <loc>https://www.imgflex.co.in/jpg-to-png</loc>
+        </url>
+
+        <url>
+            <loc>https://www.imgflex.co.in/png-to-jpg</loc>
+        </url>
+
+        <url>
+            <loc>https://www.imgflex.co.in/compress-image-to-50kb</loc>
+        </url>
+
+        <url>
+            <loc>https://www.imgflex.co.in/passport-photo-maker</loc>
+        </url>
+
+        <url>
+            <loc>https://www.imgflex.co.in/image-resizer</loc>
+        </url>
+
+    </urlset>
+    '''
+
+    return Response(
+        sitemap_xml,
+        mimetype='application/xml'
+    )
+
+
+
+
+
+# Create robots.txt
+
+
+@app.route('/robots.txt')
+def robots():
+
+    robots_text = '''
+    User-agent: *
+    Allow: /
+
+    Sitemap: https://www.imgflex.co.in/sitemap.xml
+    '''
+
+    return Response(
+        robots_text,
+        mimetype='text/plain'
+    )
+
+
+
+
 
 
 if __name__ == '__main__':
