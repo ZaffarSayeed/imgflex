@@ -5,6 +5,7 @@ import uuid
 import threading
 import time
 from flask import Response
+from flask import send_from_directory
 
 app = Flask(__name__)
 
@@ -354,6 +355,17 @@ def robots():
         mimetype='text/plain'
     )
 
+
+
+
+
+@app.route('/google116fda18fe48b460')
+def google_verification():
+
+    return send_from_directory(
+        'static',
+        'google116fda18fe48b460.html'
+    )
 
 
 
