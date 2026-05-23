@@ -359,7 +359,7 @@ def robots():
 
 
 
-@app.route('/google116fda18fe48b460')
+@app.route('/google116fda18fe48b460.html')
 def google_verification():
 
     return send_from_directory(
