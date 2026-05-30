@@ -81,6 +81,123 @@ def image_resizer():
         'image_resizer.html'
     )
 
+@app.route('/compress-image-to-20kb')
+def compress_20kb():
+
+    return render_template(
+        'compress-image-to-20kb.html'
+    )
+
+@app.route('/compress-image-to-100kb')
+def compress_100kb():
+
+    return render_template(
+        'compress-image-to-100kb.html'
+    )
+
+@app.route('/compress-image-to-200kb')
+def compress_200kb():
+
+    return render_template(
+        'compress-image-to-200kb.html'
+    )
+
+@app.route('/jpeg-to-png')
+def jpeg_to_png():
+
+    return render_template(
+        'jpeg-to-png.html'
+    )
+
+@app.route('/jpeg-to-webp')
+def jpeg_to_webp():
+
+    return render_template(
+        'jpeg-to-webp.html'
+    )
+
+@app.route('/photo-size-reducer')
+def photo_size_reducer():
+
+    return render_template(
+        'photo-size-reducer.html'
+    )
+
+@app.route('/reduce-image-size-to-50kb')
+def reduce_50kb():
+
+    return render_template(
+        'reduce-image-size-to-50kb.html'
+    )
+
+@app.route('/reduce-image-size-to-100kb')
+def reduce_100kb():
+
+    return render_template(
+        'reduce-image-size-to-100kb.html'
+    )
+
+
+@app.route('/resize-image-for-passport')
+def resize_passport():
+
+    return render_template(
+        'resize-image-for-passport.html'
+    )
+
+@app.route('/resize-image-for-railway')
+def resize_railway():
+
+    return render_template(
+        'resize-image-for-railway.html'
+    )
+
+@app.route('/resize-image-for-ssc')
+def resize_ssc():
+
+    return render_template(
+        'resize-image-for-ssc.html'
+    )
+
+@app.route('/resize-image-for-upsc')
+def resize_upsc():
+
+    return render_template(
+        'resize-image-for-upsc.html'
+    )
+
+@app.route('/resize-signature-to-20kb')
+def resize_signature_20kb():
+
+    return render_template(
+        'resize-signature-to-20kb.html'
+    )
+
+@app.route('/resize-signature-to-50kb')
+def resize_signature_50kb():
+
+    return render_template(
+        'resize-signature-to-50kb.html'
+    )
+
+@app.route('/signature-resizer')
+def signature_resizer():
+
+    return render_template(
+        'signature-resizer.html'
+    )
+
+@app.route('/webp-to-jpg')
+def webp_to_jpg():
+
+    return render_template(
+        'webp-to-jpg.html'
+    )
+
+
+
+
+
 
 @app.route('/convert', methods=['POST'])
 def convert():
