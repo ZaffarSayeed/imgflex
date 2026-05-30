@@ -212,3 +212,10 @@ footer p{
     z-index:9999;
 
 }
+
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        min-width: 100% !important;
+    }
+}
